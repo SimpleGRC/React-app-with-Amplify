@@ -13,8 +13,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-          Under construction!  
-          document.getElementsByTagName("h1")[0].style.fontSize = "6vw";
+          Under construction!  <br>
           Edit <code>src/App.js</code> and save to reload.
           </p>
           <a
