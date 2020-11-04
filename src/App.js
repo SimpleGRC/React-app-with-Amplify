@@ -13,11 +13,15 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-          Under construction!  <br>
-          <iframe title="SimpleGRC App" src="https://simplegrc.retool.com/editor/SimpleGRC"></iframe>
+          Under construction!  
           Edit <code>src/App.js</code> and save to reload.
           </p>
-          
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Learn React
           </a>
         </header>
@@ -25,5 +29,3 @@ class App extends Component {
     );
   }
 }
-
-export default withAuthenticator(App, true);
