@@ -14,6 +14,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
           Under Construction, coming soon!!
+      <iframe src="https://simplegrc.retool.com/editor/SimpleGRC" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
           </p>
       
       
