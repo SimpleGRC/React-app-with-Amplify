@@ -18,6 +18,17 @@ const config = {
 }
 
 class App extends Component {
+  S3FileUpload
+    .uploadFile(file, config)
+    .then(data => console.log(data))
+    .catch(err => console.error(err))
+
+//** OR *//
+
+uploadFile(file, config)
+    .then(data => console.log(data))
+    .catch(err => console.error(err))
+  }
   render() {
     return (
       <div className="App">
@@ -33,12 +44,11 @@ class App extends Component {
           />
 
         </p>
-
-
         </header>
       </div>
     );
   }
+
 }
 
 export default withAuthenticator(App, true);
