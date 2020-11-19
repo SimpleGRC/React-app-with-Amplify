@@ -40,7 +40,7 @@ uploadFile(file, config)
           </h3>
           <input
           type="file"
-          onChange={this.upload}
+          onChange={this.uploadFile}
           />
 
         </p>
