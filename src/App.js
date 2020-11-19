@@ -1,24 +1,21 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { withAuthenticator } from 'aws-amplify-react'
-import Amplify, { Auth } from 'aws-amplify';
-import aws_exports from './aws-exports';
 import S3FileUpload from 'react-s3';
+
 //Optional Import
 import { uploadFile } from 'react-s3';
-Amplify.configure(aws_exports);
 
 const config = {
     bucketName: 'simplegrc',
     dirName: 'Evidence', /* optional */
-    region: 'us-east-2',
-    accessKeyId: 'AKIAQ5FVT2TIC7UKRNYU',
-    secretAccessKey: 'tvgMKBHL2bZdhKVUH79F',
+    region: 'eu-west-1',
+    accessKeyId: 'AKIAQ5FVT2TIN535D6US',
+    secretAccessKey: '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',
 }
 
-class App extends Component {
-  S3FileUpload
+/*  Notice that if you don't provide a dirName, the file will be automatically uploaded to the root of your bucket */
+
+
+
+S3FileUpload
     .uploadFile(file, config)
     .then(data => console.log(data))
     .catch(err => console.error(err))
@@ -28,27 +25,14 @@ class App extends Component {
 uploadFile(file, config)
     .then(data => console.log(data))
     .catch(err => console.error(err))
-  }
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-          <h3>
-          aws s3 upload
-          </h3>
-          <input
-          type="file"
-          onChange={this.uploadFile}
-          />
 
-        </p>
-        </header>
-      </div>
-    );
-  }
-
-}
-
-export default withAuthenticator(App, true);
+  /**
+   * {
+   *   Response: {
+   *     bucket: "your-bucket-name",
+   *     key: "photos/image.jpg",
+   *     location: "https://your-bucket.s3.amazonaws.com/photos/image.jpg"
+   *   }
+   * }
+   */
+});
